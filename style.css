@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4faf7;
+  color: #17352c;
+  min-height: 100vh;
+}
+
+.header {
+  background: #0b6b50;
+  color: white;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.header p {
+  font-size: 13px;
+}
+
+.voice-btn {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+main {
+  max-width: 650px;
+  margin: auto;
+  padding: 18px;
+}
+
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
+.welcome {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.welcome h2 {
+  margin-bottom: 8px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.menu-card {
+  min-height: 125px;
+  border: none;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  font-size: 35px;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.menu-card span {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.back-btn {
+  border: none;
+  background: #0b6b50;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+h2 {
+  margin-bottom: 18px;
+}
+
+.lesson-list {
+  display: grid;
+  gap: 12px;
+}
+
+.lesson {
+  border: none;
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: left;
+  font-size: 18px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+  cursor: pointer;
+}
+
+.info-box {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  margin-top: 18px;
+  line-height: 1.7;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+
+.wudu-step {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+
+.wudu-number {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.wudu-step h3 {
+  margin-bottom: 10px;
+}
+
+.lesson-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.lesson-controls button {
+  border: none;
+  background: #0b6b50;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 10px;
+}
+
+.chat-box {
+  min-height: 300px;
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 12px;
+}
+
+.bot-message,
+.user-message {
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.bot-message {
+  background: #e4f4ee;
+}
+
+.user-message {
+  background: #d9e8ff;
+  text-align: right;
+}
+
+.chat-input {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.chat-input button {
+  border: none;
+  background: #0b6b50;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.settings-item {
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+
+.settings-item label {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  font-size: 13px;
+}
+
+body.large-text {
+  font-size: 20px;
+}
+
+body.dark {
+  background: #101817;
+  color: #f5f5f5;
+}
+
+body.dark .welcome,
+body.dark .menu-card,
+body.dark .lesson,
+body.dark .info-box,
+body.dark .wudu-step,
+body.dark .chat-box,
+body.dark .settings-item {
+  background: #1c2926;
+  color: white;
+}
+
+@media (max-width: 450px) {
+  .menu-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .menu-card {
+    min-height: 110px;
+  }
+}*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1a1a2e;
+}
+
+canvas {
+  display: block;
+  /* Pixel-perfect scaling — no blurry edges */
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}

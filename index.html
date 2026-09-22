@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="as">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b6b50">
+
+  <title>RD Namaz Saathi</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div>
+    <h1>🕌 RD Namaz Saathi</h1>
+    <p>নামাজ আৰু অজু শিকাৰ সহজ সহায়ক</p>
+  </div>
+
+  <button id="voiceBtn" class="voice-btn">🎙️</button>
+</header>
+
+<main>
+
+  <!-- HOME -->
+  <section id="home" class="screen active">
+
+    <div class="welcome">
+      <h2>আস্‌ছালামু আলাইকুম</h2>
+      <p>সহজ ভাষাত নামাজ, অজু আৰু দোৱা শিকক।</p>
+    </div>
+
+    <div class="menu-grid">
+
+      <button class="menu-card" data-screen="namaz">
+        🕌
+        <span>নামাজ শিকক</span>
+      </button>
+
+      <button class="menu-card" data-screen="wudu">
+        💧
+        <span>অজু শিকক</span>
+      </button>
+
+      <button class="menu-card" data-screen="surah">
+        📖
+        <span>সূৰা আৰু দোৱা</span>
+      </button>
+
+      <button class="menu-card" data-screen="ai">
+        🤖
+        <span>AI-ৰ সৈতে সোধক</span>
+      </button>
+
+      <button class="menu-card" data-screen="kids">
+        👦
+        <span>Kids Mode</span>
+      </button>
+
+      <button class="menu-card" data-screen="senior">
+        👴
+        <span>Senior Mode</span>
+      </button>
+
+      <button class="menu-card" data-screen="settings">
+        ⚙️
+        <span>Settings</span>
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- NAMAZ -->
+  <section id="namaz" class="screen">
+
+    <button class="back-btn" data-screen="home">← Home</button>
+
+    <h2>🕌 নামাজ শিকক</h2>
+
+    <div class="lesson-list">
+
+      <button class="lesson" data-prayer="ফজৰৰ নামাজ">
+        🌅 ফজৰ
+      </button>
+
+      <button class="lesson" data-prayer="জোহৰৰ নামাজ">
+        ☀️ জোহৰ
+      </button>
+
+      <button class="lesson" data-prayer="আছৰৰ নামাজ">
+        🌤️ আছৰ
+      </button>
+
+      <button class="lesson" data-prayer="মাগৰিবৰ নামাজ">
+        🌇 মাগৰিব
+      </button>
+
+      <button class="lesson" data-prayer="ইছাৰ নামাজ">
+        🌙 ইছা
+      </button>
+
+      <button class="lesson" data-prayer="বিতৰৰ নামাজ">
+        📿 বিতৰ
+      </button>
+
+    </div>
+
+    <div id="prayerInfo" class="info-box">
+      নামাজ বাছনি কৰক।
+    </div>
+
+  </section>
+
+
+  <!-- WUDU -->
+  <section id="wudu" class="screen">
+
+    <button class="back-btn" data-screen="home">← Home</button>
+
+    <h2>💧 অজু শিকক</h2>
+
+    <div id="wuduSteps"></div>
+
+    <div class="lesson-controls">
+      <button id="prevWudu">← আগৰ</button>
+      <span id="wuduCounter">1 / 9</span>
+      <button id="nextWudu">পিছৰ →</button>
+    </div>
+
+  </section>
+
+
+  <!-- SURAH -->
+  <section id="surah" class="screen">
+
+    <button class="back-btn" data-screen="home">← Home</button>
+
+    <h2>📖 সূৰা আৰু দোৱা</h2>
+
+    <div class="info-box">
+      <h3>শিকাৰ অংশ</h3>
+      <p>ইয়াত যাচাই কৰা সূৰা আৰু দোৱা যোগ কৰিব পাৰিব।</p>
+    </div>
+
+  </section>
+
+
+  <!-- AI -->
+  <section id="ai" class="screen">
+
+    <button class="back-btn" data-screen="home">← Home</button>
+
+    <h2>🤖 AI-ৰ সৈতে সোধক</h2>
+
+    <div id="chatBox" class="chat-box">
+      <div class="bot-message">
+        নমস্কাৰ। নামাজ বা অজু সম্পৰ্কে আপোনাৰ প্ৰশ্ন লিখক।
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <input id="questionInput"
+             type="text"
+             placeholder="আপোনাৰ প্ৰশ্ন লিখক...">
+
+      <button id="askBtn">পঠাওক</button>
+    </div>
+
+  </section>
+
+
+  <!-- KIDS -->
+  <section id="kids" class="screen">
+
+    <button class="back-btn" data-screen="home">← Home</button>
+
+    <h2>👦 Kids Mode</h2>
+
+    <div class="info-box kids-box">
+      <h3>🌟 সহজকৈ শিকোঁ</h3>
+      <p>নামাজ আৰু অজুৰ প্ৰতিটো ধাপ সহজ ভাষাত শিকক।</p>
+    </div>
+
+  </section>
+
+
+  <!-- SENIOR -->
+  <section id="senior" class="screen">
+
+    <button class="back-btn" data-screen="home">← Home</button>
+
+    <h2>👴 Senior Mode</h2>
+
+    <div class="info-box senior-box">
+      <h3>সহজ পঢ়া</h3>
+      <p>ডাঙৰ আখৰ আৰু সহজ navigation ব্যৱহাৰ কৰক।</p>
+    </div>
+
+  </section>
+
+
+  <!-- SETTINGS -->
+  <section id="settings" class="screen">
+
+    <button class="back-btn" data-screen="home">← Home</button>
+
+    <h2>⚙️ Settings</h2>
+
+    <div class="settings-item">
+      <label>
+        ডাঙৰ আখৰ
+        <input type="checkbox" id="largeText">
+      </label>
+    </div>
+
+    <div class="settings-item">
+      <label>
+        Dark Mode
+        <input type="checkbox" id="darkMode">
+      </label>
+    </div>
+
+    <div class="info-box">
+      <h3>🔐 Privacy</h3>
+      <p>RD Namaz Saathi-এ প্ৰয়োজন নোহোৱা ব্যক্তিগত তথ্য সংগ্ৰহ নকৰিব।</p>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 RD Namaz Saathi</p>
+</footer>
+
+<script src="game.js"></script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snake</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <script src="render.js"></script><!-- defines canvas, ctx, draw() -->
+  <script src="input.js"></script><!-- attaches keyboard + touch listeners -->
+  <script src="game.js"></script> <!-- state, loop, boot -->
+
+</body>
+</html>
